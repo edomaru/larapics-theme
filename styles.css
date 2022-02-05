@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,300&display=swap");
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.photo-buttons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.2s, opacity 0.3s linear;
+}
+
+.photo-buttons form {
+  display: inline-block;
+}
+
+.card:hover .photo-buttons {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tagcloud ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.tagcloud ul li {
+  display: inline-block;
+  margin: 0 0.3em 0.3em 0;
+  padding: 0;
+}
+.tagcloud ul li a {
+  display: inline-block;
+  max-width: 100px;
+  height: 28px;
+  line-height: 28px;
+  padding: 0 1em;
+  background-color: #fff;
+  border: 1px solid #aaa;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: #333;
+  font-size: 13px;
+  text-decoration: none;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.tagcloud ul li a:hover {
+  background-color: #3498db;
+  border: 1px solid #3498db;
+  color: #fff;
+}
