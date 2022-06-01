@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Eding Muhamad Saprudin">
+    <title>Larapics</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light border-bottom">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">
+                <img src="icons/logo.svg" alt="" width="30" height="24"
+                    class="d-inline-block align-text-top color-light">
+                Larapics
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-collapse"
+                aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <form class="search-form" style="width: 400px;">
+                <input type="search" name="q" placeholder="Search..." aria-label="Search...">
+            </form>
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+                <ul class="navbar-nav me-auto">
+
+                </ul>
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#">My Photos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Favorites</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">Settings</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            John Doe
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">My Photos</a></li>
+                            <li><a class="dropdown-item" href="#">Favorites</a></li>
+                            <li><a class="dropdown-item" href="#">Settings</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container py-4">
+        <form action="">
+            <div class="row gx-5">
+                <div class="col-md-6">
+                    <fieldset>
+                        <legend>Personal Data</legend>
+                        <div class="mb-3">
+                            <label class="form-label" for="username">Username</label>
+                            <input type="text" name="user[username]" id="username" class="form-control is-invalid">
+                            <div class="invalid-feedback">
+                                Please choose a username.
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="name">Full Name</label>
+                            <input type="text" name="user[name]" id="name" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="profile_image">Profile Image</label>
+                            <input type="file" name="user[profile_image]" id="profile_image" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <img src="images/user-default.png" width="150" alt="">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="city">City</label>
+                            <input type="text" name="user[city]" id="city" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="country">Country</label>
+                            <input type="text" name="user[country]" id="country" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="bio">About me</label>
+                            <textarea name="user[bio]" id="biod" rows="3" class="form-control"
+                                placeholder="In a few words, tell us about yourself"></textarea>
+                        </div>
+                    </fieldset>
+                    <fieldset class="mt-3">
+                        <legend>Account</legend>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email address</label>
+                            <input type="email" name="account[email]" id="email" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Current Password</label>
+                            <input type="password" name="account[password]" id="password" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="new_password" class="form-label">New Password</label>
+                            <input type="password" name="account[new_password]" id="new_password" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="new_password_confirmation" class="form-label">New Password confirmation</label>
+                            <input type="password" name="account[new_password_confirmation]"
+                                id="new_password_confirmation" class="form-control">
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="col-md-6">
+                    <fieldset>
+                        <legend>Cover image</legend>
+                        <div class="mb-3">
+                            <label class="form-label" for="twitter">Your Cover Image</label>
+                            <input type="file" name="user[cover_image]" id="cover_image" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <img src="https://via.placeholder.com/600x250&text=Cover Image" class="img-fluid" alt="">
+                        </div>
+                    </fieldset>
+                    <fieldset class="mt-3">
+                        <legend>Online Profiles</legend>
+                        <div class="mb-3">
+                            <label class="form-label" for="facebook">Facebook</label>
+                            <input type="text" name="social[facebook]" id="facebook" class="form-control"
+                                placeholder="https://www.facebook.com/...">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="twitter">Twitter</label>
+                            <input type="text" name="social[twitter]" id="twitter" class="form-control"
+                                placeholder="https://twitter.com/...">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="instagram">Instagram</label>
+                            <input type="text" name="social[instagram]" id="instagram" class="form-control"
+                                placeholder="https://www.instagram.com/...">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="website">Website</label>
+                            <input type="text" name="social[website]" id="website" class="form-control"
+                                placeholder="https://...">
+                        </div>
+                    </fieldset>
+                    <fieldset class="mt-3">
+                        <legend>Options</legend>
+                        <div class="mb-3">
+                            <label class="form-label">Disable Comments</label>
+                            <div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="options[disable_comments]"
+                                        id="disable_comments_no" value="0" checked>
+                                    <label class="form-check-label" for="disable_comments_no">No</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="options[disable_comments]"
+                                        id="disable_comments_yes" value="1">
+                                    <label class="form-check-label" for="disable_comments_yes">Yes</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Moderate Comments</label>
+                            <div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="options[moderate_comments]"
+                                        id="moderate_comments_no" value="0" checked>
+                                    <label class="form-check-label" for="moderate_comments_no">No</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="options[moderate_comments]"
+                                        id="moderate_comments_yes" value="1">
+                                    <label class="form-check-label" for="moderate_comments_yes">Yes</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Email Notifications</label>
+                            <div class="form-check">
+                                <input type="hidden" name="settings[email_notification][new_comment]" value="0">
+                                <input class="form-check-input" type="checkbox"
+                                    name="options[email_notification][new_comment]" id="email_notification_no" value="1"
+                                    checked>
+                                <label class="form-check-label" for="email_notification_new_comment">Notify me of new
+                                    comments</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="hidden" name="settings[email_notification][new_image]" value="0">
+                                <input class="form-check-input" type="checkbox"
+                                    name="options[email_notification][new_image]" id="email_notification_yes" value="1"
+                                    checked>
+                                <label class="form-check-label" for="disable_comments_new_image">Notify me of new images
+                                    uploaded</label>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+            <hr>
+            <div class="d-flex justify-content-center py-3">
+                <button class="btn btn-lg btn-success">Save changes</button>
+            </div>
+        </form>
+    </div>
+    <footer class="bg-light text-muted py-3 mt-5 border-top">
+        <div class="container-fluid">
+            <p class="float-end mb-1">
+                <a href="#" class="text-decoration-none">Back to top</a>
+            </p>
+            <p>Larapics provides beautiful, high quality & royalty free photos shared by creators everywhere.</p>
+            <p>&copy; 2022 Larapics</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
+        integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

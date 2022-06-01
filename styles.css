@@ -96,3 +96,41 @@ form.search-form input[type="search"]:focus {
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
+
+.jumbotron-author-image-background {
+  background-size: cover;	
+  background-attachment:fixed;
+  background-size:100% 100%;
+}
+
+.jumbotron {
+  background-color:rgba(0, 0, 0, 0.5);
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .jumbotron {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+.jumbotron p:last-child {
+margin-bottom: 0;
+}
+
+.jumbotron-heading {
+font-weight: 500;
+color: #fff;
+}
+
+.jumbotron .container {
+max-width: 40rem;
+}
+
+p.lead {
+color: #f7f7f7;
+font-size: 18px;
+}
