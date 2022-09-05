@@ -27,7 +27,7 @@
         </div>
     </nav>
     <div class="container-fluid mt-4">
-        <div class="row" data-masonry='{"percentPosition": true }'>
+        <div class="row image-grid" data-masonry='{"percentPosition": true }'>
             <div class="col-sm-6 col-lg-4 mb-4">
                 <div class="card">
                     <a href="show.html"><img src="images/img1.jpeg" height="100%" alt="Image 1"
@@ -132,6 +132,12 @@
     <script async src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
         integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D"
         crossorigin="anonymous"></script>
+    <script>
+        Promise.all(Array.from(document.images).filter(img => !img.complete).map(img => new Promise(resolve => { img.onload = img.onerror = resolve; }))).then(() => {
+            var msnry = new Masonry('.image-grid');
+            msnry.layout();
+        });
+    </script>
 </body>
 
 </html>
